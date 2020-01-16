@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Capstone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="index.css" />
+
+</head>
+<body>
+    <div class="container">
+        <div class="result"> Result
+            <p id="result">Hi result</p>
+            <p id="sub-result" class="display-area">hi history</p>
+        </div>
+        <div class="grid-container">
+                <button class="grid-item" onclick="getInput(event.target.innerText)">C</button>
+                <button class="grid-item" onclick="getInput(event.target.innerText)">CE</button>
+                <button class="grid-item operator" onclick="getInput(event.target.innerText)" >&#x25;</button>
+                <button class="grid-item operator" onclick="getInput(event.target.innerText)">&#xf7;</button>
+                <button class="grid-item" onclick="getInput(event.target.innerText)">7</button>
+                <button class="grid-item" onclick="getInput(event.target.innerText)">8</button>
+                <button class="grid-item" onclick="getInput(event.target.innerText)">9</button>
+                <button class="grid-item operator" onclick="getInput(event.target.innerText)">+</button>
+                <button class="grid-item" onclick="getInput(event.target.innerText)" >4</button>
+                <button class="grid-item" onclick="getInput(event.target.innerText)">5</button> 
+                <button class="grid-item" onclick="getInput(event.target.innerText)" >6</button>
+                <button class="grid-item operator" onclick="getInput(event.target.innerText)">-</button>
+                <button class="grid-item" onclick="getInput(event.target.innerText)">1</button> 
+                <button class="grid-item" onclick="getInput(event.target.innerText)" >2</button>
+                <button class="grid-item" onclick="getInput(event.target.innerText)">3</button> 
+                <button class="grid-item operator" onclick="getInput(event.target.innerText)">x</button> 
+                <button class="grid-item" onclick="getInput(event.target.innerText)">.</button> 
+                <button class="grid-item" onclick="getInput(event.target.innerText)">0</button> 
+                <button class="grid-item"></button> 
+                <button class="grid-item operator" style="background-color:green;color:white;" onclick="getInput(event.target.innerText)">=</button>      
+        </div>
+    </div>
+    
+    <script src="index.js"></script>
+    
+</body>
+</html>
