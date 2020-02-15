@@ -6,6 +6,21 @@
  var formatNumber="";
  var flag;
  var currentOperator="";
+ var operatorCount=0;
+
+ function disableOperatorButtons(){
+      var operatorButtons = document.getElementsByClassName("grid-item operator");
+      for(var i=0;i<operatorButtons.length;i++){
+            operatorButtons[i].disabled =true;
+      } 
+ }
+
+ function enableOperatorButtons(){
+       var operatorButtons = document.getElementsByClassName("grid-item operator");
+       for(var i=0;i<operatorButtons.length;i++){
+             operatorButtons[i].disabled = false;
+       }
+ }
 
 function getResult(){
   return document.getElementById('result').innerText;
@@ -15,19 +30,45 @@ function printResult(value){
 document.getElementById('result').innerText = value;
 }
 
+function toggleOpButtons(){
+      if(currentValue==""){
+            disableOperatorButtons();
+            console.log(currentValue);
+            return false;
+        }
+      else{
+             enableOperatorButtons();
+             console.log(currentValue);
+             return true;
+            }
+}
+
+
 function getInput(inputValue){
-  
+ var active=toggleOpButtons();
 if(inputValue==='='||inputValue==='+'||inputValue==='-'||inputValue==='x'|| inputValue==='\xf7' || inputValue==='\x25' ){
       count=0;
+      operatorCount++;
       formatNumber="";
       operator=inputValue;
       currentOperator=operator;
-      currentValue = currentValue+inputValue;
-      printResult(currentValue);
+    if(active){
+                 if(operatorCount>1){
+                   console.log(operatorCount);
+                   currentValue = currentValue + "";
+                   operatorCount--;
+                 }
+                 else{
+                       currentValue = currentValue+inputValue;
+                    }
+               
+                 printResult(currentValue); 
+           }
       if(inputValue==="="){
             processInput(currentValue.replace(/,/g,''));
             console.log(calcList);
             printResult(compute(calcList).toLocaleString("en"));
+            operatorCount=0;
             calcList=[];
             currentValue=getResult();
              
@@ -40,6 +81,7 @@ else if(inputValue==='C'||inputValue==='CE'){
 }
 else{ 
        count++;
+       operatorCount=0;
         formatNumber=formatNumber+inputValue;
        if(count>3){
             var csNum = Number(formatNumber);
@@ -77,6 +119,7 @@ else{
        }
       
       printResult(currentValue);
+      enableOperatorButtons();
 
 }
 

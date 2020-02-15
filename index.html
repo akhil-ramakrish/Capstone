@@ -10,33 +10,36 @@
 
 </head>
 <body>
-    <div class="container">
-        <div class="result"> Result
-            <p id="result"></p>
+    <diV class="parent">
+        <div class="container">
+            <div class="result"> Result
+                <p id="result"></p>
+            </div>
+            <div class="grid-container">
+                    <button class="grid-item" onclick="getInput(event.target.innerText)" style=" color:rgb(43, 161, 207);">C</button>
+                    <button class="grid-item" onclick="getInput(event.target.innerText)" style=" color:rgb(43, 161, 207);">CE</button>
+                    <button class="grid-item operator" onclick="getInput(event.target.innerText)" >&#x25;</button>
+                    <button class="grid-item operator" onclick="getInput(event.target.innerText)">&#xf7;</button>
+                    <button class="grid-item" onclick="getInput(event.target.innerText)">7</button>
+                    <button class="grid-item" onclick="getInput(event.target.innerText)">8</button>
+                    <button class="grid-item" onclick="getInput(event.target.innerText)">9</button>
+                    <button class="grid-item operator" onclick="getInput(event.target.innerText)">+</button>
+                    <button class="grid-item" onclick="getInput(event.target.innerText)" >4</button>
+                    <button class="grid-item" onclick="getInput(event.target.innerText)">5</button> 
+                    <button class="grid-item" onclick="getInput(event.target.innerText)" >6</button>
+                    <button class="grid-item operator" onclick="getInput(event.target.innerText)">-</button>
+                    <button class="grid-item" onclick="getInput(event.target.innerText)">1</button> 
+                    <button class="grid-item" onclick="getInput(event.target.innerText)" >2</button>
+                    <button class="grid-item" onclick="getInput(event.target.innerText)">3</button> 
+                    <button class="grid-item operator" onclick="getInput(event.target.innerText)">x</button> 
+                    <button class="grid-item" onclick="getInput(event.target.innerText)">.</button> 
+                    <button class="grid-item" onclick="getInput(event.target.innerText)">0</button> 
+                    <button class="grid-item"></button> 
+                    <button class="grid-item operator" id="equal" style="background-color:green;color:white;" onclick="getInput(event.target.innerText)">=</button>      
+            </div>
         </div>
-        <div class="grid-container">
-                <button class="grid-item" onclick="getInput(event.target.innerText)" style=" color:rgb(43, 161, 207);">C</button>
-                <button class="grid-item" onclick="getInput(event.target.innerText)" style=" color:rgb(43, 161, 207);">CE</button>
-                <button class="grid-item operator" onclick="getInput(event.target.innerText)" >&#x25;</button>
-                <button class="grid-item operator" onclick="getInput(event.target.innerText)">&#xf7;</button>
-                <button class="grid-item" onclick="getInput(event.target.innerText)">7</button>
-                <button class="grid-item" onclick="getInput(event.target.innerText)">8</button>
-                <button class="grid-item" onclick="getInput(event.target.innerText)">9</button>
-                <button class="grid-item operator" onclick="getInput(event.target.innerText)">+</button>
-                <button class="grid-item" onclick="getInput(event.target.innerText)" >4</button>
-                <button class="grid-item" onclick="getInput(event.target.innerText)">5</button> 
-                <button class="grid-item" onclick="getInput(event.target.innerText)" >6</button>
-                <button class="grid-item operator" onclick="getInput(event.target.innerText)">-</button>
-                <button class="grid-item" onclick="getInput(event.target.innerText)">1</button> 
-                <button class="grid-item" onclick="getInput(event.target.innerText)" >2</button>
-                <button class="grid-item" onclick="getInput(event.target.innerText)">3</button> 
-                <button class="grid-item operator" onclick="getInput(event.target.innerText)">x</button> 
-                <button class="grid-item" onclick="getInput(event.target.innerText)">.</button> 
-                <button class="grid-item" onclick="getInput(event.target.innerText)">0</button> 
-                <button class="grid-item"></button> 
-                <button class="grid-item operator" style="background-color:green;color:white;" onclick="getInput(event.target.innerText)">=</button>      
-        </div>
-    </div>
+    </diV>
+   
     
     <script src="index.js"></script>
     
