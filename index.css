@@ -12,6 +12,8 @@ body{
 .parent{
     display:flex;
     justify-content: center;
+    align-items: center;
+    height:100%
 
 }
 .container{
@@ -70,4 +72,35 @@ body{
 
 #equal:focus{
     outline: solid green;
+}
+
+@media only screen and (min-width:330px) and (max-width:768px){
+
+    .container{
+        width:100%;
+    }
+
+.grid-container{
+    width:100%;
+    grid-template-columns: auto auto auto auto;
+}
+}
+
+@media only screen and (max-height:599px){
+body{
+    height:auto;
+    margin-top: 0px;
+ }
+ .container{
+     height:auto;
+     width:auto;
+ }
+ .parent{
+     padding-top: 0px;
+ }
+ .grid-container{
+     height:auto;
+     width:auto;
+     grid-template-columns: auto auto auto auto;
+ }
 }
